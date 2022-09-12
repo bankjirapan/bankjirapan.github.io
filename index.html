@@ -66,7 +66,15 @@
 <script>
   var map = new longdo.Map({
     placeholder: document.getElementById("map"),
+    layer: [
+        longdo.Layers.GRAY
+      ],
   });
+
+  map.Event.bind('ready',() => {
+    map.Layers.add(longdo.Layers.TRAFFIC);
+    map.Overlays.load(longdo.Overlays.cameras);
+  })
 
   var rainRadar = new RainRadar(map, {
     opacity: 0.5,
