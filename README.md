@@ -1,1 +1,0 @@
-# bankjirapan.github.io
