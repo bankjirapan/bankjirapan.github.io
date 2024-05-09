@@ -1,0 +1,87 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Projects from '../components/Projects.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import TechComponent from "../components/tech/TechComponent.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div
+        class="flex flex-col-reverse items-center justify-center md:flex-row"
+      >
+        <div class="text-white md:w-[450px]">
+          <h1 class="glitch mb-1 text-3xl font-bold tracking-tight md:text-5xl">
+            bankji
+          </h1>
+          <h2 class="glitch mt-2 text-lg">Full Stack Developer</h2>
+          <h2 class="glitch text-lg">
+            now
+            <a
+              href="#"
+              target="_blank"
+              class="rounded-lg p-1 hover:bg-neon-green hover:text-gray-900"
+              >@Software developer : MM</a
+            >
+          </h2>
+          <p class="mt-4 text-left">
+            Hello, My name is jirapan you can call me bankji. I passionate
+            software developer, I graduated in Information Technology from King
+            Mongkut's University of Technology Thonburi, Bangkok Thailand
+            <br /><br />
+          </p>
+        </div>
+        <img
+          src="https://avatars.githubusercontent.com/u/20718635?v=4"
+          class="mb-10 ml-0 h-[120px] w-[120px] rounded-full md:mb-0 md:ml-10 md:h-[240px] md:w-[240px]"
+          alt="bankji"
+          loading="eager"
+          width="400"
+          height="400"
+          decoding="async"
+        />
+      </div>
+      <Projects/>
+
+      <TechComponent/>
+
+      <Footer />
+
+      <script is:inline>
+        toggleSubnav();
+        rotateMenuBtnIcon();
+
+        function toggleSubnav() {
+          const btns = document.getElementsByClassName("menu__btn");
+          Array.from(btns).forEach((btn) => {
+            btn.addEventListener("click", () => {
+              document
+                .getElementById(btn.dataset.collapseToggle)
+                .classList.toggle("hidden");
+            });
+          });
+        }
+
+        function rotateMenuBtnIcon() {
+          const btns = document.getElementsByClassName("menu__btn");
+          Array.from(btns).forEach((btn) => {
+            btn.addEventListener("click", () => {
+              const target = btn.getElementsByClassName("btn__icon")[0];
+              const seed = Number(target.dataset.deg);
+              target.style = `transform: rotate(${seed * 180}deg); transition-duration: 250ms`;
+              target.dataset.deg = Number(!seed);
+            });
+          });
+        }
+      </script>
+    </main>
+  </body>
+</html>
