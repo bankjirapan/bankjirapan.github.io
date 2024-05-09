@@ -1,0 +1,31 @@
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+ 
+ body {
+	@apply break-words bg-neutral-900 antialiased text-white;
+	text-rendering: optimizeLegibility;
+	scroll-behavior: smooth;
+	word-wrap: break-word;
+  }
+
+  
+  h1 {
+	@apply text-3xl font-bold tracking-tight text-white md:text-5xl;
+  }
+  
+  h2 {
+	@apply text-2xl font-bold tracking-tight;
+  }
+  
+  p {
+	@apply text-gray-300;
+  }
+  
+  ::selection {
+	color: #17191e;
+	background: #87cb49;
+  }

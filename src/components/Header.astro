@@ -1,0 +1,41 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+---
+
+<header>
+  <nav
+    role="navigation"
+    aria-label="navigation"
+    id="top-nav"
+    class="mx-auto flex w-full flex-col items-center gap-4 pb-8 pt-8 sm:pb-16 md:w-[740px] md:flex-row md:justify-center"
+  >
+    <ul
+      class="flex items-center justify-center gap-4 rounded-full bg-slate-950 px-8 py-4"
+    >
+      <li>
+        <HeaderLink
+          class:list={[
+            "relative font-medium text-neon-green before:absolute before:-bottom-1 before:h-0.5 before:w-full before:scale-x-0 before:bg-neon-green before:transition hover:before:scale-x-100",
+          ]}
+          href="/">Home</HeaderLink
+        >
+      <!-- </li><li>
+        <HeaderLink
+          class:list={[
+            "relative font-medium text-neon-green before:absolute before:-bottom-1 before:h-0.5 before:w-full before:scale-x-0 before:bg-neon-green before:transition hover:before:scale-x-100",
+          ]}
+          href="/blog">Blogs</HeaderLink
+        >
+      </li>
+      <li>
+        <HeaderLink
+          class:list={[
+            "relative font-medium text-neon-green before:absolute before:-bottom-1 before:h-0.5 before:w-full before:scale-x-0 before:bg-neon-green before:transition hover:before:scale-x-100",
+          ]}
+          href="/contact">Contact</HeaderLink
+        >
+      </li> -->
+    </ul>
+  </nav>
+</header>
