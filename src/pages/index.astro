@@ -2,7 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Projects from '../components/Projects.astro';
+import Projects from "../components/Projects.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import TechComponent from "../components/tech/TechComponent.astro";
 ---
@@ -18,25 +18,24 @@ import TechComponent from "../components/tech/TechComponent.astro";
       <div
         class="flex flex-col-reverse items-center justify-center md:flex-row"
       >
-        <div class="text-white md:w-[450px]">
+        <div class="w-9/12 text-white md:w-[450px]">
           <h1 class="glitch mb-1 text-3xl font-bold tracking-tight md:text-5xl">
             bankji
           </h1>
           <h2 class="glitch mt-2 text-lg">Full Stack Developer</h2>
           <h2 class="glitch text-lg">
-            now
+            prev
             <a
-              href="#"
+              href="https://www.hackapulco.com"
               target="_blank"
               class="rounded-lg p-1 hover:bg-neon-green hover:text-gray-900"
-              >@Software developer : MM</a
+              >@Hackapulco</a
             >
           </h2>
           <p class="mt-4 text-left">
             Hello, My name is jirapan you can call me bankji. I passionate
             software developer, I graduated in Information Technology from King
             Mongkut's University of Technology Thonburi, Bangkok Thailand
-            <br /><br />
           </p>
         </div>
         <img
@@ -49,9 +48,9 @@ import TechComponent from "../components/tech/TechComponent.astro";
           decoding="async"
         />
       </div>
-      <Projects/>
+      <Projects />
 
-      <TechComponent/>
+      <TechComponent />
 
       <Footer />
 
